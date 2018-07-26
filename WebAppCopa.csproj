@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\ts\filme.ts" />
+    <Content Remove="wwwroot\ts\main.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Models\Entidade\Filme.cs" />
+    <Content Include="Models\Entidade\FilmesParticipantes.cs" />
+    <Content Include="Models\Entidade\Grupo.cs" />
+    <Content Include="Models\Repositorio\FilmeRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.6" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\ts\filme.ts" />
+    <TypeScriptCompile Include="wwwroot\ts\main.ts" />
+  </ItemGroup>
+
+</Project>
